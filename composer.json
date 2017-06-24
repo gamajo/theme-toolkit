@@ -1,0 +1,39 @@
+{
+	"name": "gamajo/theme-toolkit",
+	"type": "library",
+	"description": "A tookit for applying theme customisations via a config-based approach.",
+	"keywords": ["WordPress", "theme"],
+	"license": "MIT",
+	"authors": [
+    {
+      "name": "Gary Jones",
+      "homepage": "https://gamajo.com",
+      "role": "Developer"
+    }
+	],
+	"autoload": {
+    "psr-4": {
+      "Gamajo\\ThemeToolkit\\": "src"
+    }
+	},
+	"autoload-dev": {
+    "psr-4": {
+      "Gamajo\\ThemeToolkit\\Tests\\": "src"
+    }
+	},
+	"require": {
+		"php": "^7.0",
+    "brightnucleus/config": "^0.4",
+    "roave/security-advisories": "dev-master"
+	},
+  "require-dev": {
+    "brain/monkey": "^2",
+    "phpunit/phpunit": "^6.1",
+    "squizlabs/php_codesniffer": "^3.0.1"
+  },
+  "config": {
+    "sort-order": true
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
