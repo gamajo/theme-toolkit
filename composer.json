@@ -1,10 +1,10 @@
 {
     "name": "gamajo/theme-toolkit",
     "type": "library",
-    "description": "A tookit for applying theme customisations via a config-based approach.",
+    "description": "Building blocks for developing a config-based WordPress theme.",
     "keywords": [
         "WordPress",
-        "theme"
+        "wordpress-theme-development"
     ],
     "license": "MIT",
     "authors": [
