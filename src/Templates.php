@@ -48,7 +48,7 @@ class Templates extends Brick
      */
     public function apply()
     {
-        if ($this->config->hasKey(static::UNREGISTER)) {
+        if ($this->config->hasKey(self::UNREGISTER)) {
             add_filter('theme_page_templates', [$this, 'unregister']);
         }
     }
@@ -60,6 +60,6 @@ class Templates extends Brick
      */
     public function unregister(array $page_templates)
     {
-        return array_diff_key($page_templates, array_flip($this->config->getSubConfig(static::UNSET)->getArrayCopy()));
+        return array_diff_key($page_templates, array_flip($this->config->getSubConfig(self::UNSET)->getArrayCopy()));
     }
 }

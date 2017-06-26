@@ -60,12 +60,12 @@ class WidgetAreas extends Brick
      */
     public function apply()
     {
-        if ($this->config->hasKey(static::REGISTER)) {
-            $this->register($this->config->getSubConfig(static::REGISTER)->getArrayCopy());
+        if ($this->config->hasKey(self::REGISTER)) {
+            $this->register($this->config->getSubConfig(self::REGISTER)->getArrayCopy());
         }
 
-        if ($this->config->hasKey(static::UNREGISTER)) {
-            $this->unregister($this->config->getSubConfig(static::UNREGISTER)->getArrayCopy());
+        if ($this->config->hasKey(self::UNREGISTER)) {
+            $this->unregister($this->config->getSubConfig(self::UNREGISTER)->getArrayCopy());
         }
     }
 

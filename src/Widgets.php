@@ -49,11 +49,11 @@ class Widgets extends Brick
      */
     public function apply()
     {
-        if ($this->config->hasKey(static::UNREGISTER)) {
+        if ($this->config->hasKey(self::UNREGISTER)) {
             add_action('widgets_init', [$this, 'unregister'], 15);
         }
 
-        if ($this->config->hasKey(static::REGISTER)) {
+        if ($this->config->hasKey(self::REGISTER)) {
             add_action('widgets_init', [$this, 'register'], 15);
         }
     }
@@ -63,7 +63,7 @@ class Widgets extends Brick
      */
     public function register()
     {
-        array_map('register_widget', $this->config->getSubConfig(static::REGISTER)->getArrayCopy());
+        array_map('register_widget', $this->config->getSubConfig(self::REGISTER)->getArrayCopy());
     }
 
     /**
@@ -71,6 +71,6 @@ class Widgets extends Brick
      */
     public function unregister()
     {
-        array_map('unregister_widget', $this->config->getSubConfig(static::UNREGISTER)->getArrayCopy());
+        array_map('unregister_widget', $this->config->getSubConfig(self::UNREGISTER)->getArrayCopy());
     }
 }
