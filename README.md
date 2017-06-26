@@ -52,14 +52,6 @@ function setup() {
 	$config_file = __DIR__ . '/config/defaults.php';
 	$config = ConfigFactory::createSubConfig( $config_file, 'Gamajo\ExampleTheme' );
 
-	$apply_brick_closure = function( $brick ) use ( $config ) {
-		$class = array_pop( explode('\\', $brick ) );
-		if ( $config->hasKey( $class ) ) {
-			$brick_object = new $brick( $config->getSubConfig( $class ) );
-			$brick_object->apply();
-		}
-	};
-
 	// These bricks are run in admin and front-end.
 	$bricks = [
 		ImageSizes::class,
@@ -70,7 +62,8 @@ function setup() {
 	];
 
 	// Apply logic in bricks, with configuration defined in config/defaults.php.
-	array_walk( $bricks, $apply_brick_closure );
+	array_walk( $bricks, ThemeToolkit::class . '::apply', $config );
+
 
 	if ( ! is_admin() ) {
 		// Only front-end bricks.
@@ -78,7 +71,8 @@ function setup() {
 			GoogleFonts::class,
 		];
 
-		array_walk( $bricks, $apply_brick_closure );
+		array_walk( $bricks, ThemeToolkit::class . '::apply', $config );
+
 	}
 }
 ```
