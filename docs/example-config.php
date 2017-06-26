@@ -49,7 +49,7 @@ $gamajo_google_fonts = [
 ];
 
 $gamajo_templates = [
-	Templates::UNSET => [
+	Templates::UNREGISTER => [
 		'page-foobar.php',
 	],
 ];

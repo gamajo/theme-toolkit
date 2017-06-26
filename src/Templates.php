@@ -13,13 +13,13 @@ declare(strict_types=1);
 namespace Gamajo\ThemeToolkit;
 
 /**
- * Unset page templates.
+ * Unregister page templates.
  *
  * Example config:
  *
  * ```
  * $gamajo_templates = [
- *     Templates::UNSET => [
+ *     Templates::UNREGISTER => [
  *         'page_blog.php',
  *     ],
  * ];
@@ -41,24 +41,24 @@ namespace Gamajo\ThemeToolkit;
  */
 class Templates extends Brick
 {
-    const UNSET = 'unset';
+    const UNREGISTER = 'unregister';
 
     /**
-     * Apply image size customizations.
+     * Apply template unregistrations.
      */
     public function apply()
     {
-        if ($this->config->hasKey(static::UNSET)) {
-            add_filter('theme_page_templates', [$this, 'unset']);
+        if ($this->config->hasKey(static::UNREGISTER)) {
+            add_filter('theme_page_templates', [$this, 'unregister']);
         }
     }
 
     /**
-     * Unset page templates for given keys.
+     * Unregister page templates for given keys.
      *
      * @param array $image_size_item Keys.
      */
-    public function unset(array $page_templates)
+    public function unregister(array $page_templates)
     {
         return array_diff_key($page_templates, array_flip($this->config->getSubConfig(static::UNSET)->getArrayCopy()));
     }
