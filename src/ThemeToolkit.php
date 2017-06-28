@@ -43,25 +43,26 @@ class ThemeToolkit
     const WIDGETS = 'Widgets';
 
     /**
-     * For a given brick, instantiate the brick, pass in the right part of the
-     * config, and call the apply method.
+     * For a given list of bricks, instantiate each brick, pass in the right part of the
+     * config, and call the apply() method.
      *
      * This would be applied to an array of brick FQCNs as:
      *
      * ```
-     * array_walk( $bricks, ThemeToolkit::class . '::apply', $config );
+     * ThemeToolkit::applyBricks($config, ...$bricks);
      * ```
      *
-     * @param string          $brick       Current brick.
-     * @param int             $brick_index Index of current brick.
-     * @param ConfigInterface $config      Extra data.
+     * @param ConfigInterface $config  Configuration for the brick class.
+     * @param \string[]       $classes Fully qualified class name of brick classes.
      */
-    public static function apply(string $brick, int $brick_index, ConfigInterface $config)
+    public static function applyBricks(ConfigInterface $config, string...$classes)
     {
-        $class = array_pop(explode('\\', $brick));
-        if ($config->hasKey($class)) {
-            $brick_object = new $brick($config->getSubConfig($class));
-            $brick_object->apply();
-        }
+        array_walk($classes, function ($brick) use ($config) {
+            $baseClassName = array_pop(explode('\\', $brick));
+            if ($config->hasKey($baseClassName)) {
+                $brick_object = new $brick($config->getSubConfig($baseClassName));
+                $brick_object->apply();
+            }
+        });
     }
 }

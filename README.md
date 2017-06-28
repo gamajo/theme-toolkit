@@ -62,7 +62,7 @@ function setup() {
 	];
 
 	// Apply logic in bricks, with configuration defined in config/defaults.php.
-	array_walk( $bricks, ThemeToolkit::class . '::apply', $config );
+	ThemeToolkit::applyBricks($config, ...$bricks);
 
 
 	if ( ! is_admin() ) {
@@ -71,7 +71,7 @@ function setup() {
 			GoogleFonts::class,
 		];
 
-		array_walk( $bricks, ThemeToolkit::class . '::apply', $config );
+		ThemeToolkit::applyBricks($config, ...$bricks);
 
 	}
 }
