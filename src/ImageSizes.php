@@ -2,7 +2,7 @@
 /**
  * This file contains elements for image sizes in WordPress
  *
- * @package   Gamajo\ThemeTookit
+ * @package   Gamajo\ThemeToolkit
  * @author    Gary Jones
  * @copyright Gamajo
  * @license   MIT
@@ -38,7 +38,7 @@ namespace Gamajo\ThemeToolkit;
  * ];
  * ```
  *
- * @package Gamajo\ThemeTookit
+ * @package Gamajo\ThemeToolkit
  */
 class ImageSizes extends Brick
 {

@@ -2,7 +2,7 @@
 /**
  * This file contains elements for widgets in WordPress
  *
- * @package   Gamajo\ThemeTookit
+ * @package   Gamajo\ThemeToolkit
  * @author    Gary Jones
  * @copyright Gamajo
  * @license   MIT
