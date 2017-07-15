@@ -2,7 +2,7 @@
 /**
  * A brick is a class that uses an config to determine how a theme is built
  *
- * @package   Gamajo\ThemeTookit
+ * @package   Gamajo\ThemeToolkit
  * @author    Gary Jones
  * @copyright Gamajo
  * @license   MIT

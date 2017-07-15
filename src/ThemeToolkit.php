@@ -2,7 +2,7 @@
 /**
  * This file contains class name definitions for bricks in the ThemeToolkit
  *
- * @package   Gamajo\ThemeTookit
+ * @package   Gamajo\ThemeToolkit
  * @author    Gary Jones
  * @copyright Gamajo
  * @license   MIT
@@ -31,7 +31,7 @@ use BrightNucleus\Config\ConfigInterface;
  * ];
  * ```
  *
- * @package Gamajo\ThemeTookit
+ * @package Gamajo\ThemeToolkit
  */
 class ThemeToolkit
 {
