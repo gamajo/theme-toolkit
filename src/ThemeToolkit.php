@@ -35,6 +35,7 @@ use BrightNucleus\Config\ConfigInterface;
  */
 class ThemeToolkit
 {
+    const DEPENDENCIES = 'Dependencies';
     const GOOGLEFONTS = 'GoogleFonts';
     const IMAGESIZES = 'ImageSizes';
     const TEMPLATES = 'Templates';
