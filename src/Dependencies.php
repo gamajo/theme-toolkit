@@ -8,7 +8,7 @@
  * @license   MIT
  */
 
-declare( strict_types=1 );
+declare(strict_types=1);
 
 namespace Gamajo\ThemeToolkit;
 
@@ -62,13 +62,12 @@ use BrightNucleus\Dependency\DependencyManager;
  */
 class Dependencies extends Brick
 {
-
-	/**
-	 * Initialize DependencyManager and hook it up to WordPress.
-	 */
-	public function apply()
-	{
-		$dependencies = new DependencyManager($this->config);
-		add_action( 'init', [$dependencies, 'register'] );
-	}
+    /**
+     * Initialize DependencyManager and hook it up to WordPress.
+     */
+    public function apply()
+    {
+        $dependencies = new DependencyManager($this->config);
+        add_action('init', [$dependencies, 'register']);
+    }
 }

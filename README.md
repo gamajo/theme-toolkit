@@ -12,6 +12,7 @@ It uses the [BrightNucleus\Config](https://github.com/brightnucleus/config) pack
 - Add theme support.
 - Register and unregister widget areas (sidebars).
 - Register and unregister widgets.
+- Manage script and style dependencies.
 
 ## Installation
 
@@ -35,6 +36,7 @@ Your theme would then contain a function, in the `functions.php`, to pull in thi
 namespace Gamajo\ExampleTheme;
 
 use BrightNucleus\Config\ConfigFactory;
+use Gamajo\ThemeToolkit\Dependencies;
 use Gamajo\ThemeToolkit\GoogleFonts;
 use Gamajo\ThemeToolkit\ImageSizes;
 use Gamajo\ThemeToolkit\Templates;
@@ -54,6 +56,7 @@ function setup() {
 
 	// These bricks are run in admin and front-end.
 	$bricks = [
+	    Dependencies::class,
 		ImageSizes::class,
 		Templates::class,
 		ThemeSupport::class,
