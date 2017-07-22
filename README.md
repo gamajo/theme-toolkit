@@ -56,7 +56,7 @@ function setup() {
 
 	// These bricks are run in admin and front-end.
 	$bricks = [
-	    Dependencies::class,
+		Dependencies::class,
 		ImageSizes::class,
 		Templates::class,
 		ThemeSupport::class,
