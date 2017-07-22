@@ -8,10 +8,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 _Nothing yet._
 
 ## [0.5.0] - 2017-07-22
-## Added
+### Added
 - Add Dependencies brick which uses `brightnucleus/dependencies`. Props [Craig Simpson].
 
-## Fixed
+### Fixed
 - Replace use of `UNSET` class constant with `UNREGISTER`. Props [Craig Simpson].
 - Fix spelling of "Toolkit" in file header comment. Props [Craig Simpson].
 
