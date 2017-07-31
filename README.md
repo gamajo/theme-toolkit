@@ -16,6 +16,8 @@ It uses the [BrightNucleus\Config](https://github.com/brightnucleus/config) pack
 
 ## Installation
 
+Requires PHP 7.1.
+
 In a terminal, browse to the directory with your theme in and then:
 
 ~~~sh
