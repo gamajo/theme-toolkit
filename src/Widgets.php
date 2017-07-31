@@ -63,7 +63,8 @@ class Widgets extends Brick
      */
     public function register()
     {
-        array_map('register_widget', $this->config->getSubConfig(self::REGISTER)->getArrayCopy());
+        $registerConfig = $this->config->getSubConfig(self::REGISTER);
+        array_map('register_widget', $registerConfig->getArrayCopy());
     }
 
     /**
@@ -71,6 +72,7 @@ class Widgets extends Brick
      */
     public function unregister()
     {
-        array_map('unregister_widget', $this->config->getSubConfig(self::UNREGISTER)->getArrayCopy());
+        $unregisterConfig = $this->config->getSubConfig(self::UNREGISTER);
+        array_map('unregister_widget', $unregisterConfig->getArrayCopy());
     }
 }

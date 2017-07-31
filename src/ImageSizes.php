@@ -51,11 +51,13 @@ class ImageSizes extends Brick
     public function apply()
     {
         if ($this->config->hasKey(self::REMOVE)) {
-            $this->remove($this->config->getSubConfig(self::REMOVE)->getArrayCopy());
+            $removeConfig = $this->config->getSubConfig(self::REMOVE);
+            $this->remove($removeConfig->getArrayCopy());
         }
 
         if ($this->config->hasKey(self::ADD)) {
-            $this->add($this->config->getSubConfig(self::ADD)->getArrayCopy());
+            $addConfig = $this->config->getSubConfig(self::ADD);
+            $this->add($addConfig->getArrayCopy());
         }
     }
 

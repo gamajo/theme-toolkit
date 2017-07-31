@@ -60,10 +60,12 @@ class Templates extends Brick
      */
     public function unregister(array $page_templates)
     {
+        $unregisterConfig = $this->config->getSubConfig(self::UNREGISTER);
+
         return array_diff_key(
             $page_templates,
             array_flip(
-                $this->config->getSubConfig(self::UNREGISTER)->getArrayCopy()
+                $unregisterConfig->getArrayCopy()
             )
         );
     }
