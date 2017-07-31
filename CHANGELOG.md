@@ -7,6 +7,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 _Nothing yet._
 
+## [0.6.0] - 2017-07-31
+### Added
+- Add ObjectCalisthenics checks.
+
+### Changed
+- **Bump minimum PHP to 7.1**
+
 ## [0.5.0] - 2017-07-22
 ### Added
 - Add Dependencies brick which uses `brightnucleus/dependencies`. Props [Craig Simpson].
