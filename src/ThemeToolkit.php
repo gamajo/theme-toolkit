@@ -59,7 +59,8 @@ class ThemeToolkit
     public static function applyBricks(ConfigInterface $config, string...$classes)
     {
         array_walk($classes, function ($brick) use ($config) {
-            $baseClassName = array_pop(explode('\\', $brick));
+            $splitClassName = explode('\\', $brick);
+            $baseClassName  = array_pop($splitClassName);
             if ($config->hasKey($baseClassName)) {
                 $brick_object = new $brick($config->getSubConfig($baseClassName));
                 $brick_object->apply();
