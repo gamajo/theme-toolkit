@@ -24,8 +24,7 @@ namespace Gamajo\ThemeToolkit;
  *     ],
  *     Menus::REGISTER => [
  *         [
- *             'location'    => 'new-main-nav',
- *             'description' => __( 'Primary navigation menu', 'your-text-domain' ),
+ *             'new-main-nav' => __( 'Primary navigation menu', 'your-text-domain' ),
  *         ],
  *     ],
  * ];
@@ -74,7 +73,7 @@ class Menus extends Brick
      */
     public function register(array $menus)
     {
-        array_walk($menus, function (array $menu) {
+        array_walk($menus, function ($menu) {
             \register_nav_menus($menu);
         });
     }
