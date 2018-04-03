@@ -42,6 +42,7 @@ class ThemeToolkit
     const THEMESUPPORT = 'ThemeSupport';
     const WIDGETAREAS = 'WidgetAreas';
     const WIDGETS = 'Widgets';
+    const MENUS = 'Menus';
 
     /**
      * For a given list of bricks, instantiate each brick, pass in the right part of the
